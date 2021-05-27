@@ -2,26 +2,56 @@ import * as React from 'react';
 import { Component } from 'react-simplified';
 import ReactDOM from 'react-dom';
 import { NavLink, HashRouter, Route } from 'react-router-dom';
-import { pool } from './mysql-pool';
-import { ProgramList, ProgramDetails } from './programs';
-import { StudentDetails, StudentList } from './students';
-import { HospitalsList } from './hospitals';
+import {
+  HospitalsEast,
+  HospitalsHC,
+  HospitalsMidlands,
+  HospitalsLondon,
+  HospitalsScotland,
+  HospitalsSouth,
+  HospitalsSouthWest,
+  HospitalsWales,
+  HospitalsNorth,
+} from './hospitals';
 
 class Menu extends Component {
   render() {
     return (
       <div>
         <NavLink exact to="/" activeStyle={{ color: 'darkblue' }}>
-          StudAdm
-        </NavLink>{' '}
-        <NavLink to="/students" activeStyle={{ color: 'darkblue' }}>
-          Students
-        </NavLink>{' '}
-        <NavLink to="/programs" activeStyle={{ color: 'darkblue' }}>
-          Programs
-        </NavLink>{' '}
+          Hospital Admin
+        </NavLink>
+        {' ｜ '}
         <NavLink to="/hospitals" activeStyle={{ color: 'darkblue' }}>
-          Hospitals
+          East
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-home" activeStyle={{ color: 'darkblue' }}>
+          Home Counties
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-midlands" activeStyle={{ color: 'darkblue' }}>
+          Midlands
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-london" activeStyle={{ color: 'darkblue' }}>
+          London
+        </NavLink>
+        {'  '}
+        <NavLink to="/hospitals-south" activeStyle={{ color: 'darkblue' }}>
+          South
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-southwest" activeStyle={{ color: 'darkblue' }}>
+          South West
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-wales" activeStyle={{ color: 'darkblue' }}>
+          Wales
+        </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-north" activeStyle={{ color: 'darkblue' }}>
+          North
         </NavLink>
       </div>
     );
@@ -30,7 +60,7 @@ class Menu extends Component {
 
 class Home extends Component {
   render() {
-    return <div>Welcome to StudAdm</div>;
+    return <div>Welcome to Hospital Admin</div>;
   }
 }
 
@@ -39,10 +69,14 @@ ReactDOM.render(
     <div>
       <Menu />
       <Route exact path="/" component={Home} />
-      <Route exact path="/students" component={StudentList} />
-      <Route exact path="/programs" component={ProgramList} />
-      <Route exact path="/programs/:id" component={ProgramDetails} />
-      <Route exact path="/hospitals" component={HospitalsList} />
+      <Route exact path="/hospitals" component={HospitalsEast} />
+      <Route exact path="/hospitals-home" component={HospitalsHC} />
+      <Route exact path="/hospitals-midlands" component={HospitalsMidlands} />
+      <Route exact path="/hospitals-north" component={HospitalsNorth} />
+      <Route exact path="/hospitals-london" component={HospitalsLondon} />
+      <Route exact path="/hospitals-south" component={HospitalsSouth} />
+      <Route exact path="/hospitals-southwest" component={HospitalsSouthWest} />
+      <Route exact path="/hospitals-wales" component={HospitalsWales} />
     </div>
   </HashRouter>,
   document.getElementById('root')
