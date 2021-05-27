@@ -40,7 +40,6 @@ ReactDOM.render(
       <Menu />
       <Route exact path="/" component={Home} />
       <Route exact path="/students" component={StudentList} />
-      <Route exact path="/students/:id" component={StudentDetails} />
       <Route exact path="/programs" component={ProgramList} />
       <Route exact path="/programs/:id" component={ProgramDetails} />
       <Route exact path="/hospitals" component={HospitalsList} />
