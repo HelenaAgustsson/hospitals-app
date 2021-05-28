@@ -46,6 +46,10 @@ class Menu extends Component {
           South West
         </NavLink>
         {' ｜ '}
+        <NavLink to="/hospitals-scotland" activeStyle={{ color: 'darkblue' }}>
+          Scotland
+        </NavLink>
+        {' ｜ '}
         <NavLink to="/hospitals-wales" activeStyle={{ color: 'darkblue' }}>
           Wales
         </NavLink>
@@ -76,6 +80,7 @@ ReactDOM.render(
       <Route exact path="/hospitals-london" component={HospitalsLondon} />
       <Route exact path="/hospitals-south" component={HospitalsSouth} />
       <Route exact path="/hospitals-southwest" component={HospitalsSouthWest} />
+      <Route exact path="/hospitals-scotland" component={HospitalsScotland} />
       <Route exact path="/hospitals-wales" component={HospitalsWales} />
     </div>
   </HashRouter>,

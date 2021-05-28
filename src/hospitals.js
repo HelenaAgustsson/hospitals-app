@@ -18,7 +18,7 @@ export class HospitalsNorth extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -48,7 +48,7 @@ export class HospitalsEast extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -78,7 +78,7 @@ export class HospitalsHC extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -108,7 +108,7 @@ export class HospitalsLondon extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -138,7 +138,7 @@ export class HospitalsMidlands extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -159,21 +159,25 @@ export class HospitalsScotland extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Region}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a href={hospital.Website}>Link</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -181,6 +185,9 @@ export class HospitalsScotland extends Component {
       if (error) return console.log('error');
       this.hospitals = results;
     });
+  }
+  copy() {
+    console.log(document.getElementsByTagName('TABLE').value());
   }
 }
 
@@ -200,7 +207,7 @@ export class HospitalsSouth extends Component {
                 <td>{hospital.Postcode}</td>
                 <td>{hospital.Region}</td>
                 <td>
-                  <a href={hospital.Region}>Link</a>
+                  <a href={hospital.Website}>Link</a>
                 </td>
               </tr>
             ))}
@@ -231,7 +238,7 @@ export class HospitalsSouthWest extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
@@ -261,7 +268,7 @@ export class HospitalsWales extends Component {
               <td>{hospital.Postcode}</td>
               <td>{hospital.Region}</td>
               <td>
-                <a href={hospital.Region}>Link</a>
+                <a href={hospital.Website}>Link</a>
               </td>
             </tr>
           ))}
