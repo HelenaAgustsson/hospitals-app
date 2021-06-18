@@ -9,21 +9,36 @@ export class HospitalsNorth extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -39,21 +54,36 @@ export class HospitalsEast extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -69,21 +99,36 @@ export class HospitalsHC extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -99,21 +144,36 @@ export class HospitalsLondon extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -127,23 +187,39 @@ export class HospitalsLondon extends Component {
 export class HospitalsMidlands extends Component {
   programs = [];
   hospitals = [];
+  result = '';
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -162,6 +238,15 @@ export class HospitalsScotland extends Component {
       <div className="container">
         <div className="table-responsive">
           <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
             <tbody>
               {this.hospitals.map((hospital) => (
                 <tr key={hospital.Hospital}>
@@ -170,7 +255,9 @@ export class HospitalsScotland extends Component {
                   <td>{hospital.Postcode}</td>
                   <td>{hospital.Region}</td>
                   <td>
-                    <a href={hospital.Website}>Link</a>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -196,23 +283,35 @@ export class HospitalsSouth extends Component {
   hospitals = [];
   render() {
     return (
-      <div>
-        <p> </p>
-        <table>
-          <tbody>
-            {this.hospitals.map((hospital) => (
-              <tr key={hospital.Hospital}>
-                <td>{hospital.Hospital}</td>
-                <td>{hospital.City}</td>
-                <td>{hospital.Postcode}</td>
-                <td>{hospital.Region}</td>
-                <td>
-                  <a href={hospital.Website}>Link</a>
-                </td>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
@@ -229,21 +328,36 @@ export class HospitalsSouthWest extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
@@ -259,25 +373,85 @@ export class HospitalsWales extends Component {
   hospitals = [];
   render() {
     return (
-      <table>
-        <tbody>
-          {this.hospitals.map((hospital) => (
-            <tr key={hospital.Hospital}>
-              <td>{hospital.Hospital}</td>
-              <td>{hospital.City}</td>
-              <td>{hospital.Postcode}</td>
-              <td>{hospital.Region}</td>
-              <td>
-                <a href={hospital.Website}>Link</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
   mounted() {
     pool.query('SELECT * FROM Hospitals WHERE Region="Wales"', [], (error, results) => {
+      if (error) return console.log('error');
+      this.hospitals = results;
+    });
+  }
+}
+
+export class HospitalsNI extends Component {
+  programs = [];
+  hospitals = [];
+  render() {
+    return (
+      <div className="container">
+        <div className="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col">City</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Region</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.hospitals.map((hospital) => (
+                <tr key={hospital.Hospital}>
+                  <td>{hospital.Hospital}</td>
+                  <td>{hospital.City}</td>
+                  <td>{hospital.Postcode}</td>
+                  <td>{hospital.Region}</td>
+                  <td>
+                    <a target="_blank" href={hospital.Website}>
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
+  mounted() {
+    pool.query('SELECT * FROM Hospitals WHERE Region="Northern Ireland"', [], (error, results) => {
       if (error) return console.log('error');
       this.hospitals = results;
     });

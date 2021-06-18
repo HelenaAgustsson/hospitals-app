@@ -12,6 +12,7 @@ import {
   HospitalsSouthWest,
   HospitalsWales,
   HospitalsNorth,
+  HospitalsNI,
 } from './hospitals';
 
 class Menu extends Component {
@@ -57,6 +58,10 @@ class Menu extends Component {
         <NavLink to="/hospitals-north" activeStyle={{ color: 'darkblue' }}>
           North
         </NavLink>
+        {' ｜ '}
+        <NavLink to="/hospitals-NI" activeStyle={{ color: 'darkblue' }}>
+          Northern Ireland
+        </NavLink>
       </div>
     );
   }
@@ -82,6 +87,7 @@ ReactDOM.render(
       <Route exact path="/hospitals-southwest" component={HospitalsSouthWest} />
       <Route exact path="/hospitals-scotland" component={HospitalsScotland} />
       <Route exact path="/hospitals-wales" component={HospitalsWales} />
+      <Route exact path="/hospitals-NI" component={HospitalsNI} />
     </div>
   </HashRouter>,
   document.getElementById('root')

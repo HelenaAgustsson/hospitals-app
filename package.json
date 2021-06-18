@@ -1,9 +1,13 @@
 {
+  "homepage": "https://helenaagustsson.github.io/hospital-app",
   "name": "desktop-application",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "electron 11.2"
@@ -20,7 +24,8 @@
     "gh-pages": "^3.2.0",
     "mysql": "^2.18.1",
     "react-router-dom": "^5.2.0",
-    "react-simplified": "^2.0.2"
+    "react-simplified": "^2.0.2",
+    "react-scripts": "4.0.3"
   },
   "devDependencies": {
     "flow-bin": "^0.144.0",
